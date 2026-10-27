@@ -26,7 +26,7 @@ DataLens is a beginner-friendly Python web app that helps users explore CSV file
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/RohitSukhwani05/DataLens.git
 cd datalens
 ```
 
