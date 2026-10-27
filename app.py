@@ -60,7 +60,7 @@ if uploaded_file is not None:
     )
     st.subheader("Data Visualization")
 
-        st.subheader("Data Visualization")
+    st.subheader("Data Visualization")
 
     numeric_columns = cleaned_data.select_dtypes(include="number").columns
 
