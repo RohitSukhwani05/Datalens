@@ -68,6 +68,6 @@ if uploaded_file is not None:
             numeric_columns
         )
 
-        st.bar_chart(data, x="Name", y=selected_column)
+        st.bar_chart(cleaned_data, x="Name", y=selected_column)
     else:
         st.info("No numerical columns available for charts.")
