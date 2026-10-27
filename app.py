@@ -60,14 +60,21 @@ if uploaded_file is not None:
     )
     st.subheader("Data Visualization")
 
-    numeric_columns = data.select_dtypes(include="number").columns
+        st.subheader("Data Visualization")
 
-    if len(numeric_columns) > 0:
+    numeric_columns = cleaned_data.select_dtypes(include="number").columns
+
+    if len(numeric_columns) > 0 and not cleaned_data.empty:
+
         selected_column = st.selectbox(
             "Choose a column to visualize",
             numeric_columns
         )
 
-        st.bar_chart(cleaned_data, x="Name", y=selected_column)
+        if "Name" in cleaned_data.columns:
+            st.bar_chart(cleaned_data, x="Name", y=selected_column)
+        else:
+            st.bar_chart(cleaned_data, y=selected_column)
+
     else:
-        st.info("No numerical columns available for charts.")
+        st.info("No numerical data available for charts after cleaning.")
